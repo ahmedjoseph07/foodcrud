@@ -1,8 +1,6 @@
-// controllers/foodController.js
-
 import Food from '../models/Food.js';
 
-// Create a new food item
+
 export const createFood = async (req, res) => {
   try {
     const newFood = new Food(req.body);
@@ -14,7 +12,7 @@ export const createFood = async (req, res) => {
   }
 };
 
-// Get all food items
+
 export const getAllFoods = async (req, res) => {
   try {
     const foods = await Food.find();
@@ -25,7 +23,7 @@ export const getAllFoods = async (req, res) => {
   }
 };
 
-// Update a food item by ID
+
 export const updateFood = async (req, res) => {
   try {
     const { id } = req.params;
@@ -37,7 +35,7 @@ export const updateFood = async (req, res) => {
   }
 };
 
-// Delete a food item by ID
+
 export const deleteFood = async (req, res) => {
   try {
     const { id } = req.params;
